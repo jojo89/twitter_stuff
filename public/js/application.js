@@ -11,6 +11,12 @@ $(document).ready(function() {
 
   })
   $('button').on('click',function(e){
+    e.preventDefault();
+     $('#tweets').append("<img src='ajax-loader.gif' id='spinna'>");
+    $.get("/yolo",function(response){
+       $('#spinna').remove();
+      $('#tweets').append(response);
+    })
 
   })
 

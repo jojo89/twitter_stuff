@@ -17,7 +17,7 @@ post '/posts' do
 
 end  
 
-post '/yolo' do 
+get '/yolo' do 
   @yolo = Twitter.search("yolo", :count => 1, :result_type => "recent").attrs[:statuses].first[:text]
   
 
