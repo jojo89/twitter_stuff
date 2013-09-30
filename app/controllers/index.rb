@@ -24,3 +24,8 @@ get '/yolo' do
   erb :yolo, layout: false
 
 end  
+
+post "/tweet" do
+  p Twitter.update(params[:tweet])
+
+end

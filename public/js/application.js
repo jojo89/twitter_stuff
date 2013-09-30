@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  $('form').on('submit',function(e){
+  $('#search').on('submit',function(e){
     e.preventDefault();
     $('#tweets').append("<img src='ajax-loader.gif' id='spinna'>");
-    var data = $('form').serialize();
+    var data = $('#search').serialize();
     $.post('/posts',data,function(response){
       $('#spinna').remove();
       console.log(response)
@@ -19,6 +19,16 @@ $(document).ready(function() {
     })
 
   })
+
+  $('#tweet').on('submit',function(e){
+    e.preventDefault();
+    var data = $('#tweet').serialize();
+    console.log(data)
+    $.post('/tweet',data,function(){
+
+    });
+
+  });
 
 
   // This is called after the document has loaded in its entirety

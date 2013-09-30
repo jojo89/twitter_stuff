@@ -1,8 +1,12 @@
 <div class="container">
   <h1>Welcome to Twitter!</h1>
-  <form action="/posts" method="POST">
+  <form action="/posts" id= "search"method="POST">
     <input type="text" id="twitter" name="username">
     <input type="submit">
+  </form>  
+  <form action="/tweet" id= "tweet"method="POST">
+    <input type="text" id="twitter" name="tweet">
+    <input type="submit" value="tweet">
   </form>  
   <button type="button">YOLO</button>
   <div id="tweets">
