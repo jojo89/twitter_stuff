@@ -1,0 +1,8 @@
+<br>
+<%=@user.username%>
+<ul>
+<% @user.tweets.limit(10).each do |t|%>
+<li><%= t.body %></li>
+<%end%>
+</ul>
+
